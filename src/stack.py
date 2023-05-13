@@ -1,7 +1,8 @@
 class Node:
     """Класс для узла стека"""
 
-    def __init__(self, data, next_node=None):
+
+    def __init__(self, data, next_node = None):
         """
         Конструктор класса Node
 
@@ -14,6 +15,7 @@ class Node:
 
 class Stack:
     """Класс для стека"""
+
 
     def __init__(self):
         """Конструктор класса Stack"""
