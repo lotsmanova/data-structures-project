@@ -25,7 +25,8 @@ class Stack:
     def push(self, data):
         """
         Метод для добавления элемента на вершину стека
-        :param data: данные, которые будут добавлены на вершину стека
+        :param data: данные, которые будут
+        добавлены на вершину стека
         """
         node = Node(data)
         node.next_node = self.top
@@ -48,6 +49,7 @@ class Stack:
 
 
     def __str__(self):
+        """Магический метод для строкового представления объекта"""
         if self.top.next_node != None:
             return f'''Вершина стэка: {self.top.data}
 Следующий узел: {self.top.next_node.data}'''
