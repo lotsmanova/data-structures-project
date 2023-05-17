@@ -45,3 +45,10 @@ class Stack:
             self.top = self.top.next_node
             pop_node.next_node = None
             return pop_node.data
+
+
+    def __str__(self):
+        if self.top.next_node != None:
+            return f'''Вершина стэка: {self.top.data}
+Следующий узел: {self.top.next_node.data}'''
+        return f'Вершина стэка: {self.top.data}'
