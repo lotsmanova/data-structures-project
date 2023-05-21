@@ -2,7 +2,7 @@ class Node:
     """Класс для узла стека"""
 
 
-    def __init__(self, data, next_node = None):
+    def __init__(self, data: str, next_node = None) -> None:
         """
         Конструктор класса Node
 
@@ -17,12 +17,12 @@ class Stack:
     """Класс для стека"""
 
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Конструктор класса Stack"""
         self.top = None
 
 
-    def push(self, data):
+    def push(self, data: str) -> None:
         """
         Метод для добавления элемента на вершину стека
         :param data: данные, которые будут
@@ -33,7 +33,7 @@ class Stack:
         self.top = node
 
 
-    def pop(self):
+    def pop(self) -> str:
         """
         Метод для удаления элемента с вершины стека и его возвращения
 
@@ -48,7 +48,7 @@ class Stack:
             return pop_node.data
 
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Магический метод для строкового представления объекта"""
         if self.top.next_node != None:
             return f'''Вершина стэка: {self.top.data}
