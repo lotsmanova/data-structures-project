@@ -1,7 +1,7 @@
 class Node:
     """Класс для узла очереди"""
 
-    def __init__(self, data, next_node=None):
+    def __init__(self, data: str, next_node=None) -> None:
         """
         Конструктор класса Node
 
@@ -15,13 +15,13 @@ class Queue:
     """Класс для очереди"""
 
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Конструктор класса Queue"""
         self.head = None
         self.tail = None
 
 
-    def enqueue(self, data):
+    def enqueue(self, data: str) -> None:
         """
         Метод для добавления элемента в очередь
 
@@ -46,7 +46,7 @@ class Queue:
         pass
 
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Магический метод для строкового представления объекта"""
         if self.head is None:
             return f''
