@@ -8,7 +8,7 @@ class Node:
         :param data: данные, которые будут храниться в узле
         """
         self.data = data
-        self.next_node = Node
+        self.next_node = next_node
 
 
 class Queue:
@@ -36,7 +36,7 @@ class Queue:
             self.tail = node
 
 
-    def dequeue(self):
+    def dequeue(self) -> str:
         """
         Метод для удаления элемента из очереди.
         Возвращает данные удаленного элемента
