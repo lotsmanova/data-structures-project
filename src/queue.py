@@ -8,7 +8,7 @@ class Node:
         :param data: данные, которые будут храниться в узле
         """
         self.data = data
-        self.next_node = next_node
+        self.next_node = Node
 
 
 class Queue:
@@ -43,7 +43,11 @@ class Queue:
 
         :return: данные удаленного элемента
         """
-        pass
+        pop_node = self.head
+        self.head = self.head.next_node
+        if self.head is None:
+            self.tail = None
+        return pop_node.data
 
 
     def __str__(self) -> str:
@@ -52,3 +56,4 @@ class Queue:
             return f''
         return f'{self.head.data}\n{self.head.next_node.data}\n' \
                f'{self.tail.data}'
+
