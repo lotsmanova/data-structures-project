@@ -36,14 +36,18 @@ class Queue:
             self.tail = node
 
 
-    def dequeue(self):
+    def dequeue(self) -> str:
         """
         Метод для удаления элемента из очереди.
         Возвращает данные удаленного элемента
 
         :return: данные удаленного элемента
         """
-        pass
+        pop_node = self.head
+        self.head = self.head.next_node
+        if self.head is None:
+            self.tail = None
+        return pop_node.data
 
 
     def __str__(self) -> str:
@@ -52,3 +56,4 @@ class Queue:
             return f''
         return f'{self.head.data}\n{self.head.next_node.data}\n' \
                f'{self.tail.data}'
+
