@@ -43,6 +43,8 @@ class Queue:
 
         :return: данные удаленного элемента
         """
+        if self.head is None:
+            return None
         pop_node = self.head
         self.head = self.head.next_node
         if self.head is None:
@@ -56,4 +58,3 @@ class Queue:
             return f''
         return f'{self.head.data}\n{self.head.next_node.data}\n' \
                f'{self.tail.data}'
-
